@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- pass custom variable to checkout page -->
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="checkout_custom_shipping_block" xsi:type="object">
+                    Pixafy\PONumber\Model\CustomConfigProvider
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!--add purchase order number field on checkout-->
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="checkout_shipping" type="Pixafy\PONumber\Plugin\Checkout\Model\LayoutProcessorPlugin" sortOrder="150"/>
+    </type>
+</config>

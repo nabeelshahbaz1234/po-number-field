@@ -1,0 +1,31 @@
+<!-- ko if: (isRequired())-->
+<div class="po-field field-number">
+    <label class="po-label po-required">
+        <span>PO Number</span>
+    </label>
+    <div class="control">
+        <input class="input-text po-input"
+               required
+               id="pixafy_po"
+               minlength="1"
+               data-validate='{"required":true, "minlength":1}'
+               data-bind="value: po , event: {blur: updatePo} "/>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko ifnot: (isRequired()) -->
+<div class="po-field field-number">
+    <label class="po-label">
+        <span>PO Number</span>
+    </label>
+    <div class="control">
+        <input class="input-text po-input"
+               id="po_pixafy"
+               data-bind="value: po , event: {blur: updatePo} "/>
+    </div>
+</div>
+<!-- /ko -->
+
+
+
+

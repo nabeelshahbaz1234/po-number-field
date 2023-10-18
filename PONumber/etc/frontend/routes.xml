@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <router id="standard">
+        <route id="po_number" frontName="po_number">
+            <module name="Pixafy_PONumber"/>
+        </route>
+    </router>
+</config>
